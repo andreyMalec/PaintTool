@@ -1,0 +1,13 @@
+if OpenFileDialog1.ShowDialog = System.Windows.Forms.DialogResult.OK then
+    if openFileDialog1.FileName <> '' then begin
+      var b := new Bitmap(openFileDialog1.FileName);
+      bmp := new Bitmap(pictureBox1.Width, pictureBox1.Height);
+      g := Graphics.FromImage(bmp);
+      g.DrawImage(b, new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height));
+      FirstResize:=0;
+    end;
+
+if SaveFileDialog1.ShowDialog = System.Windows.Forms.DialogResult.OK then
+    bmp.Save(SaveFileDialog1.FileName);
+
+JPeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|PNG Image|*.png|All|*.*

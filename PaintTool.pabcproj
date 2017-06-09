@@ -3,6 +3,8 @@
   <Items>
     <Item Type="SourceFile" Name="PaintTool.pas" Path="PaintTool.pas" />
     <Item Type="SourceFile" Name="Unit1.pas" Path="Unit1.pas" />
+    <Item Type="SourceFile" Name="Palette.pas" Path="Palette.pas" />
+    <Item Type="SourceFile" Name="GlobalVar.pas" Path="GlobalVar.pas" />
     <Item Type="Reference" AssemblyName="System" FullAssemblyName="System.dll" />
     <Item Type="Reference" AssemblyName="System.Windows.Forms" FullAssemblyName="System.Windows.Forms.dll" />
     <Item Type="Reference" AssemblyName="System.Drawing" FullAssemblyName="System.Drawing.dll" />
@@ -11,5 +13,7 @@
     <Item Type="Reference" AssemblyName="System.Data.DataSetExtensions" FullAssemblyName="System.Data.DataSetExtensions.dll" />
     <Item Type="Reference" AssemblyName="System.Xml" FullAssemblyName="System.Xml.dll" />
     <Item Type="Reference" AssemblyName="System.Xml.Linq" FullAssemblyName="System.Xml.Linq.dll" />
+    <Item Type="Reference" AssemblyName="System.Threading" FullAssemblyName="System.Threading.dll" />
+    <Item Type="Reference" AssemblyName="System.IO" FullAssemblyName="System.IO.dll" />
   </Items>
 </Project>

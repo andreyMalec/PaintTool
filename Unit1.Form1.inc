@@ -16,6 +16,7 @@ procedure InitializeComponent;
         self.toolStripMenuItem8 := new System.Windows.Forms.ToolStripMenuItem();
         self.toolStripMenuItem12 := new System.Windows.Forms.ToolStripMenuItem();
         self.toolStripMenuItem13 := new System.Windows.Forms.ToolStripMenuItem();
+        self.toolStripMenuItem14 := new System.Windows.Forms.ToolStripMenuItem();
         self.toolStripMenuItem10 := new System.Windows.Forms.ToolStripMenuItem();
         self.toolStripMenuItem15 := new System.Windows.Forms.ToolStripMenuItem();
         self.toolStripMenuItem16 := new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +62,7 @@ procedure InitializeComponent;
         self.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[4](self.toolStripMenuItem1, self.toolStripMenuItem2, self.toolStripMenuItem8, self.toolStripMenuItem10));
         self.menuStrip1.Location := new System.Drawing.Point(0, 0);
         self.menuStrip1.Name := 'menuStrip1';
-        self.menuStrip1.Size := new System.Drawing.Size(784, 24);
+        self.menuStrip1.Size := new System.Drawing.Size(1000, 24);
         self.menuStrip1.TabIndex := 0;
         self.menuStrip1.Text := 'menuStrip1';
         // 
@@ -145,7 +146,7 @@ procedure InitializeComponent;
         // 
         // toolStripMenuItem8
         // 
-        self.toolStripMenuItem8.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[2](self.toolStripMenuItem12, self.toolStripMenuItem13));
+        self.toolStripMenuItem8.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[3](self.toolStripMenuItem12, self.toolStripMenuItem13, self.toolStripMenuItem14));
         self.toolStripMenuItem8.Name := 'toolStripMenuItem8';
         self.toolStripMenuItem8.Size := new System.Drawing.Size(95, 20);
         self.toolStripMenuItem8.Text := 'Изображение';
@@ -165,6 +166,13 @@ procedure InitializeComponent;
         self.toolStripMenuItem13.Size := new System.Drawing.Size(210, 22);
         self.toolStripMenuItem13.Text := 'Очистить палитру';
         self.toolStripMenuItem13.Click += toolStripMenuItem13_Click;
+        // 
+        // toolStripMenuItem14
+        // 
+        self.toolStripMenuItem14.Name := 'toolStripMenuItem14';
+        self.toolStripMenuItem14.Size := new System.Drawing.Size(210, 22);
+        self.toolStripMenuItem14.Text := 'Изменить размер';
+        self.toolStripMenuItem14.Click += toolStripMenuItem14_Click;
         // 
         // toolStripMenuItem10
         // 
@@ -299,13 +307,13 @@ procedure InitializeComponent;
         self.pictureBox1.Anchor := (System.Windows.Forms.AnchorStyles((((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Bottom) 
                     or System.Windows.Forms.AnchorStyles.Left) 
                     or System.Windows.Forms.AnchorStyles.Right)));
-        self.pictureBox1.BackColor := System.Drawing.Color.Transparent;
+        self.pictureBox1.BackColor := System.Drawing.Color.White;
         self.pictureBox1.BorderStyle := System.Windows.Forms.BorderStyle.FixedSingle;
         self.pictureBox1.Cursor := System.Windows.Forms.Cursors.Cross;
         self.pictureBox1.Image := (System.Drawing.Image(resources.GetObject('pictureBox1.Image')));
         self.pictureBox1.Location := new System.Drawing.Point(42, 69);
         self.pictureBox1.Name := 'pictureBox1';
-        self.pictureBox1.Size := new System.Drawing.Size(603, 491);
+        self.pictureBox1.Size := new System.Drawing.Size(819, 592);
         self.pictureBox1.TabIndex := 6;
         self.pictureBox1.TabStop := false;
         self.pictureBox1.MouseDown += pictureBox1_MouseDown;
@@ -319,7 +327,7 @@ procedure InitializeComponent;
         // button1
         // 
         self.button1.Anchor := (System.Windows.Forms.AnchorStyles((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Right)));
-        self.button1.Location := new System.Drawing.Point(651, 67);
+        self.button1.Location := new System.Drawing.Point(867, 67);
         self.button1.Name := 'button1';
         self.button1.Size := new System.Drawing.Size(121, 28);
         self.button1.TabIndex := 7;
@@ -349,9 +357,9 @@ procedure InitializeComponent;
         // pictureBox2
         // 
         self.pictureBox2.Anchor := (System.Windows.Forms.AnchorStyles((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Right)));
-        self.pictureBox2.BackColor := System.Drawing.SystemColors.ControlText;
+        self.pictureBox2.BackColor := System.Drawing.Color.Black;
         self.pictureBox2.BorderStyle := System.Windows.Forms.BorderStyle.FixedSingle;
-        self.pictureBox2.Location := new System.Drawing.Point(651, 101);
+        self.pictureBox2.Location := new System.Drawing.Point(867, 101);
         self.pictureBox2.Name := 'pictureBox2';
         self.pictureBox2.Size := new System.Drawing.Size(35, 35);
         self.pictureBox2.TabIndex := 9;
@@ -362,7 +370,7 @@ procedure InitializeComponent;
         self.pictureBox3.Anchor := (System.Windows.Forms.AnchorStyles((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Right)));
         self.pictureBox3.BackColor := System.Drawing.Color.White;
         self.pictureBox3.BorderStyle := System.Windows.Forms.BorderStyle.FixedSingle;
-        self.pictureBox3.Location := new System.Drawing.Point(663, 113);
+        self.pictureBox3.Location := new System.Drawing.Point(879, 113);
         self.pictureBox3.Name := 'pictureBox3';
         self.pictureBox3.Size := new System.Drawing.Size(35, 35);
         self.pictureBox3.TabIndex := 10;
@@ -372,7 +380,7 @@ procedure InitializeComponent;
         // 
         self.Layers.Anchor := (System.Windows.Forms.AnchorStyles((System.Windows.Forms.AnchorStyles.Bottom or System.Windows.Forms.AnchorStyles.Right)));
         self.Layers.FormattingEnabled := true;
-        self.Layers.Location := new System.Drawing.Point(651, 456);
+        self.Layers.Location := new System.Drawing.Point(867, 557);
         self.Layers.Name := 'Layers';
         self.Layers.Size := new System.Drawing.Size(121, 64);
         self.Layers.Sorted := true;
@@ -382,7 +390,7 @@ procedure InitializeComponent;
         // button3
         // 
         self.button3.Anchor := (System.Windows.Forms.AnchorStyles((System.Windows.Forms.AnchorStyles.Bottom or System.Windows.Forms.AnchorStyles.Right)));
-        self.button3.Location := new System.Drawing.Point(651, 526);
+        self.button3.Location := new System.Drawing.Point(867, 627);
         self.button3.Name := 'button3';
         self.button3.Size := new System.Drawing.Size(25, 23);
         self.button3.TabIndex := 13;
@@ -393,7 +401,7 @@ procedure InitializeComponent;
         // button4
         // 
         self.button4.Anchor := (System.Windows.Forms.AnchorStyles((System.Windows.Forms.AnchorStyles.Bottom or System.Windows.Forms.AnchorStyles.Right)));
-        self.button4.Location := new System.Drawing.Point(682, 525);
+        self.button4.Location := new System.Drawing.Point(898, 626);
         self.button4.Name := 'button4';
         self.button4.Size := new System.Drawing.Size(25, 23);
         self.button4.TabIndex := 14;
@@ -461,7 +469,7 @@ procedure InitializeComponent;
         // 
         self.pictureBox4.Anchor := (System.Windows.Forms.AnchorStyles((System.Windows.Forms.AnchorStyles.Top or System.Windows.Forms.AnchorStyles.Right)));
         self.pictureBox4.BackgroundImage := (System.Drawing.Image(resources.GetObject('pictureBox4.BackgroundImage')));
-        self.pictureBox4.Location := new System.Drawing.Point(689, 101);
+        self.pictureBox4.Location := new System.Drawing.Point(905, 101);
         self.pictureBox4.Name := 'pictureBox4';
         self.pictureBox4.Padding := new System.Windows.Forms.Padding(3);
         self.pictureBox4.Size := new System.Drawing.Size(9, 9);
@@ -481,7 +489,7 @@ procedure InitializeComponent;
         // 
         // Form1
         // 
-        self.ClientSize := new System.Drawing.Size(784, 561);
+        self.ClientSize := new System.Drawing.Size(1000, 662);
         self.Controls.Add(self.pictureBox4);
         self.Controls.Add(self.Beraser);
         self.Controls.Add(self.Bpipette);
@@ -502,6 +510,7 @@ procedure InitializeComponent;
         self.Controls.Add(self.label1);
         self.Controls.Add(self.toolStrip1);
         self.Controls.Add(self.menuStrip1);
+        self.DoubleBuffered := true;
         self.Icon := (System.Drawing.Icon(resources.GetObject('$this.Icon')));
         self.MainMenuStrip := self.menuStrip1;
         self.MinimumSize := new System.Drawing.Size(320, 330);
