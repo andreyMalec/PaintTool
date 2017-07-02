@@ -1,0 +1,14 @@
+F:\Projects\C#\PaintTool\PaintTool\bin\Debug\PaintTool.exe.config
+F:\Projects\C#\PaintTool\PaintTool\bin\Debug\PaintTool.exe
+F:\Projects\C#\PaintTool\PaintTool\bin\Debug\PaintTool.pdb
+F:\Projects\C#\PaintTool\PaintTool\obj\Debug\PaintTool.csprojResolveAssemblyReference.cache
+F:\Projects\C#\PaintTool\PaintTool\obj\Debug\MainWindow.g.cs
+F:\Projects\C#\PaintTool\PaintTool\obj\Debug\App.g.cs
+F:\Projects\C#\PaintTool\PaintTool\obj\Debug\PaintTool_MarkupCompile.cache
+F:\Projects\C#\PaintTool\PaintTool\obj\Debug\PaintTool_MarkupCompile.lref
+F:\Projects\C#\PaintTool\PaintTool\obj\Debug\MainWindow.baml
+F:\Projects\C#\PaintTool\PaintTool\obj\Debug\PaintTool.g.resources
+F:\Projects\C#\PaintTool\PaintTool\obj\Debug\PaintTool.Properties.Resources.resources
+F:\Projects\C#\PaintTool\PaintTool\obj\Debug\PaintTool.csproj.GenerateResource.Cache
+F:\Projects\C#\PaintTool\PaintTool\obj\Debug\PaintTool.exe
+F:\Projects\C#\PaintTool\PaintTool\obj\Debug\PaintTool.pdb
