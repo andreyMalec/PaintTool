@@ -6,13 +6,26 @@
         xmlns:local="clr-namespace:PaintTool"
         mc:Ignorable="d"
         Title="PaintTool" Height="700" Width="860" Background="White" Icon="Resources/PaintTool(1).ico" FontFamily="Moire" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" MinWidth="860" MinHeight="700">
-    <Grid Margin="0" Background="#FFF0F0F0">
+    <Window.CommandBindings>
+        <CommandBinding Command="local:MainWindow.UndoCom" Executed="UndoCom_Executed"/>
+        <CommandBinding Command="local:MainWindow.RedoCom" Executed="RedoCom_Executed"/>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Key="Z" Modifiers="Ctrl" Command="local:MainWindow.UndoCom"/>
+        <KeyBinding Key="Z" Modifiers="Ctrl+Shift" Command="local:MainWindow.RedoCom"/>
+    </Window.InputBindings>
+    <Grid x:Name="Grid1" Margin="0" Background="#FFF0F0F0">
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <Canvas x:Name="Canvas" Margin="50,78,170,11" Background="White" MouseDown="DrawArea_MouseDown" MouseUp="DrawArea_MouseUp" MouseMove="DrawArea_MouseMove"/>
+        <Rectangle Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Height="78" VerticalAlignment="Top" />
+        <Rectangle Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" HorizontalAlignment="Left" Width="50" />
+        <Rectangle Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" HorizontalAlignment="Right" Width="170" />
+        <Rectangle Fill="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Height="11" VerticalAlignment="Bottom" />
         <Menu x:Name="Menu1" VerticalContentAlignment="Center" Height="19" VerticalAlignment="Top" Margin="0" Grid.ColumnSpan="2">
             <MenuItem FontSize="12" FontFamily="Moire" Header="File">
                 <MenuItem Header="New" Margin="0" InputGestureText="Ctrl+N" Click="MenuItem_Click" FontSize="12">
@@ -44,10 +57,11 @@
                 </MenuItem>
             </MenuItem>
             <MenuItem FontFamily="Moire" Header="Edit">
-                <MenuItem Header="Undo" InputGestureText="Ctrl+Z"/>
+                <MenuItem x:Name="UndoMenu" Header="Undo" InputGestureText="Ctrl+Z" Click="UndoMenu_Click"/>
+                <MenuItem x:Name="RedoMenu" Header="Redo" InputGestureText="Ctrl+Shift+Z" Click="RedoMenu_Click"/>
             </MenuItem>
             <MenuItem FontFamily="Moire" Header="Image">
-                <MenuItem Header="Clear"/>
+                <MenuItem Header="Clear" Click="MenuItem_Click_2"/>
             </MenuItem>
             <MenuItem FontFamily="Moire" Header="Help">
                 <MenuItem Header="View help" InputGestureText="Ctrl+F1"/>
@@ -117,9 +131,8 @@
             <ComboBoxItem Content="90"/>
             <ComboBoxItem Content="100"/>
         </ComboBox>
-        <Button Content="+" HorizontalAlignment="Left" Margin="194,48,0,0" Width="25" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="1,-2,1,1" Height="25"/>
-        <Button Content="-" HorizontalAlignment="Left" Margin="224,48,0,0" Width="25" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="1,-2,1,1" Height="25"/>
-        <Image x:Name="DrawArea" Margin="50,78,170,0" Source="Resources/1.bmp" Stretch="Fill"/>
+        <Button Content="+" HorizontalAlignment="Left" Margin="194,48,0,0" Width="25" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="1,-2,1,1" Height="25" Click="Button_Click"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="224,48,0,0" Width="25" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" VerticalAlignment="Top" Padding="1,-2,1,1" Height="25" Click="Button_Click_1"/>
         <TabControl TabStripPlacement="Left" Margin="0,78,5,0" HorizontalAlignment="Right" Width="160">
             <TabControl.Resources>
                 <Style TargetType="{x:Type TabItem}">
@@ -152,9 +165,7 @@
                     </ListBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Additionally">
-                
-            </TabItem>
+            <TabItem Header="Additionally"/>
         </TabControl>
     </Grid>
 </Window>
